@@ -67,8 +67,8 @@
                 <div class="gallery-grid">
                     
                     <!-- YouTube Video -->
-                    <div class="media-card">
-                        <iframe src="https://www.youtube.com/embed/Es5JYd6LEL4?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="media-card video-card">
+                        <iframe src="https://www.youtube.com/embed/Es5JYd6LEL4?rel=0&enablejsapi=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
 
                     <!-- Photo 1 -->
@@ -90,5 +90,25 @@
 
     <!-- Reusing the cv-script.js for the continuous background scrolling -->
     <script src="cv-script.js"></script>
+    <script>
+        // Hover Autoplay and Reset for YouTube Videos
+        const videoCards = document.querySelectorAll('.video-card');
+        
+        videoCards.forEach(card => {
+            const iframe = card.querySelector('iframe');
+            if(iframe) {
+                card.addEventListener('mouseenter', () => {
+                    // Play video on hover
+                    iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+                });
+                card.addEventListener('mouseleave', () => {
+                    // Pause video when mouse leaves
+                    iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+                    // Reset video to the beginning
+                    iframe.contentWindow.postMessage('{"event":"command","func":"seekTo","args":[0, true]}', '*');
+                });
+            }
+        });
+    </script>
 </body>
 </html>

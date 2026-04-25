@@ -333,14 +333,17 @@ canvas {
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
 }
 
 .media-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(14, 165, 233, 0.2);
-    border-color: rgba(14, 165, 233, 0.4);
+    transform: scale(1.15);
+    z-index: 10;
+    box-shadow: 0 25px 50px rgba(14, 165, 233, 0.3);
+    border-color: rgba(14, 165, 233, 0.6);
 }
 
 .media-card img, .media-card iframe {
@@ -349,4 +352,10 @@ canvas {
     object-fit: cover;
     display: block;
     border: none;
+    transition: all 0.4s ease;
+}
+
+.media-card:hover img {
+    object-fit: contain;
+    background-color: rgba(0, 0, 0, 0.7);
 }
