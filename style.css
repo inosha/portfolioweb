@@ -114,6 +114,10 @@ canvas {
     pointer-events: auto;
 }
 
+.cv-page .scroll-section {
+    min-height: 70vh;
+}
+
 /* Glassmorphism Cards */
 .glass-card {
     background: var(--card-bg);
