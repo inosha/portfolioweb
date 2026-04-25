@@ -15,6 +15,23 @@ document.addEventListener("DOMContentLoaded", () => {
     const progressBar = document.getElementById("progress-bar");
     const progressText = document.getElementById("progress-text");
 
+    // Intersection Observer for the scrolling text elements (fade-in effect)
+    const fadeElements = document.querySelectorAll('.fade-text');
+    
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1 // Trigger earlier to ensure visibility
+    };
+
+    const textObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, observerOptions);
+
     // State for smooth scrolling animation
     let animationState = {
         currentFrameIndex: 0,
@@ -63,7 +80,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (loadedImages === frameCount) {
                     setTimeout(() => {
                         loader.style.opacity = "0";
-                        loader.style.visibility = "hidden";
+                        setTimeout(() => {
+                            loader.style.display = "none";
+                            // Reveal content and enable interactions
+                            const content = document.getElementById("content");
+                            if (content) {
+                                content.style.opacity = "1";
+                                content.style.pointerEvents = "auto";
+                            }
+                            // Trigger the intersection observer manually for elements already in view
+                            fadeElements.forEach(el => textObserver.observe(el));
+                        }, 500);
                         // Start the render loop once loading is complete
                         requestAnimationFrame(render);
                     }, 600);
@@ -120,23 +147,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Start preloading mechanism
     preloadImages();
-
-    // Intersection Observer for the scrolling text elements (fade-in effect)
-    const fadeElements = document.querySelectorAll('.fade-text');
-    
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.4 // Trigger when 40% of the element is visible
-    };
-
-    const textObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, observerOptions);
 
     fadeElements.forEach(el => {
         textObserver.observe(el);
