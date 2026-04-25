@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const context = canvas.getContext("2d");
 
     // Configuration
-    const frameCount = 192; // Total number of frames in the anim folder
-    const scrollSensitivity = 8; // Controls how much scrolling is required (multiplied by 100vh)
+    const frameCount = 100; // Shortened from 192
+    const scrollSensitivity = 5; // Reduced from 8 for a tighter experience
     
     // Set dynamic body height based on sensitivity to allow enough scrolling space
     document.body.style.height = `${scrollSensitivity * 100}vh`;
