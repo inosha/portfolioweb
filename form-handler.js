@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const formData = {
                 company: document.getElementById("company").value,
                 name: document.getElementById("name").value,
-                contact: document.getElementById("contact").value,
+                contact: document.getElementById("user-contact").value,
                 message: document.getElementById("message").value,
                 timestamp: new Date().toLocaleString()
             };
