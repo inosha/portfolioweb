@@ -3,30 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculum Vitae | INOSHA P. HETTI A.</title>
-    <meta name="description" content="Curriculum Vitae of INOSHA P. HETTI A., CNC Machinist Student.">
+    <title>Professional CV | INOSHA P. HETTI A.</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <style>
-        /* Override for continuous CV flow instead of distinct tiles */
-        .scroll-section {
-            min-height: auto;
-            padding: 2rem 20px;
-        }
-        #hero {
-            min-height: 100vh;
-        }
-        main#content {
-            padding-bottom: 20vh;
-        }
-    </style>
 </head>
-<body>
+<body class="lang-en">
+    <button id="lang-toggle">EN / FI</button>
+
     <div id="loader">
         <div class="loader-content">
-            <h2>Loading Curriculum Vitae</h2>
+            <h2 lang="en">Loading CV</h2>
+            <h2 lang="fi">Ladataan CV:tä</h2>
             <div class="progress-bar-container">
                 <div id="progress-bar"></div>
             </div>
@@ -41,80 +30,79 @@
     <div class="parallax-bg" id="stars"></div>
 
     <main id="content">
-        <!-- Header Section -->
+        <!-- CV Header -->
         <section class="scroll-section" id="hero">
             <div class="glass-card fade-text">
-                <img src="img/cv.png" alt="INOSHA P. HETTI A. Profile Photo" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem; border: 3px solid rgba(255, 255, 255, 0.2); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);">
-                <h1>Curriculum Vitae</h1>
-                <p class="subtitle">INOSHA P. HETTI A.</p>
-                <p>Aspiring CNC Machinist & Manufacturing Professional</p>
-                <p class="scroll-prompt">Scroll down to view details ↓</p>
+                <h1>INOSHA P. HETTI A.</h1>
+                <h2 lang="en">Professional CV</h2>
+                <h2 lang="fi">Ammatillinen CV</h2>
+                <p lang="en">CNC Machinist Student | Precision Specialist</p>
+                <p lang="fi">CNC-koneistajaopiskelija | Tarkkuusasiantuntija</p>
             </div>
         </section>
 
-        <!-- Experience Section -->
-        <section class="scroll-section" id="experience">
+        <!-- Skills Summary -->
+        <section class="scroll-section" id="skills">
             <div class="glass-card fade-text">
-                <h2>Professional Experience</h2>
-                <div class="projects-list">
-                    <div class="project-item">
-                        <h3>Machinist Student</h3>
-                        <p><strong>2025 – Present</strong></p>
-                        <ul style="margin-top: 10px; padding-left: 20px; color: #e2e8f0; line-height: 1.6;">
-                            <li>Manufacture precise machine components using CNC turning (Okuma and Fanuc) and CNC milling, as well as manual turning and manual milling.</li>
-                            <li>Perform daily machine maintenance and tool changes.</li>
-                            <li>Inspect parts using micrometers, calipers, and thread pitch gauges to ensure adherence to tight tolerances.</li>
-                            <li>Perform MIG/MAG welding and utilize 3D printing for component production.</li>
-                            <li>Install and maintain bearing, pneumatic, hydraulic, and basic electronic systems.</li>
-                            <li>Interpret technical drawings and ensure accuracy in machining processes.</li>
-                            <li>Operate machine tools while maintaining high standards of quality control.</li>
-                            <li>Use WinCAM and CIMCO for CNC programming, simulation, and G-code management.</li>
-                            <li>Create 3D models and technical drawings using Autodesk Inventor.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Education Section -->
-        <section class="scroll-section" id="education">
-            <div class="glass-card fade-text">
-                <h2>Education</h2>
-                <div class="projects-list">
-                    <div class="project-item">
-                        <h3>Mechanical and Production Technology (Machinist)</h3>
-                        <p><strong>Gradia Vocational School (Ammattiopisto)</strong> | Expected Graduation: 2026</p>
-                        <ul style="margin-top: 10px; padding-left: 20px; color: #e2e8f0; line-height: 1.6;">
-                            <li>Coursework includes CNC machining (Okuma and Fanuc), manual machining, CAD/CAM integration, G-code programming, metallurgy, technical drawing, and welding.</li>
-                            <li>Developing practical skills in machine operation, precision measurement, and production techniques.</li>
-                            <li>Consistently achieving strong academic performance (above 4.5/5) in hands-on lab practicals.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Certifications Section -->
-        <section class="scroll-section" id="certifications">
-            <div class="glass-card fade-text">
-                <h2>Certifications</h2>
+                <h2 lang="en">Core Skills</h2>
+                <h2 lang="fi">Ydinosaaminen</h2>
                 <div class="skills-grid">
                     <div class="skill-item">
-                        <h3>First Aid</h3>
-                        <p>(Ensiapu)</p>
+                        <h3 lang="en">Machining</h3>
+                        <h3 lang="fi">Koneistus</h3>
+                        <p lang="en">CNC Milling, CNC Turning, Manual Lathe/Mill, 3D Printing</p>
+                        <p lang="fi">CNC-jyrsintä, CNC-sorvaus, manuaalisorvaus/-jyrsintä, 3D-tulostus</p>
                     </div>
                     <div class="skill-item">
-                        <h3>Hot Work Permit</h3>
-                        <p>(Tulityökortti)</p>
+                        <h3 lang="en">Programming</h3>
+                        <h3 lang="fi">Ohjelmointi</h3>
+                        <p lang="en">G-Code, M-Code, Conversational Programming</p>
+                        <p lang="fi">G-koodi, M-koodi, keskusteleva ohjelmointi</p>
                     </div>
                     <div class="skill-item">
-                        <h3>Occupational Safety Card</h3>
-                        <p>(Työturvallisuuskortti)</p>
+                        <h3 lang="en">Software</h3>
+                        <h3 lang="fi">Ohjelmistot</h3>
+                        <p lang="en">CIMCO, WinCAM, Autodesk Inventor, UltiMaker Cura</p>
+                        <p lang="fi">CIMCO, WinCAM, Autodesk Inventor, UltiMaker Cura</p>
                     </div>
                     <div class="skill-item">
-                        <h3>Hygiene Passport</h3>
-                        <p>(Hygieniapassi)</p>
+                        <h2 lang="en" style="font-size: 1.5rem; margin-bottom: 0.5rem;">Quality Assurance</h2>
+                        <h2 lang="fi" style="font-size: 1.5rem; margin-bottom: 0.5rem;">Laadunvarmistus</h2>
+                        <p lang="en">GD&T, Micrometers, Calipers, Thread Gauges</p>
+                        <p lang="fi">GD&T, mikrometrit, työntömitat, kierretulkit</p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section class="scroll-section" id="experience">
+            <div class="glass-card fade-text">
+                <h2 lang="en">Professional Experience</h2>
+                <h2 lang="fi">Työkokemus</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3 lang="en">CNC Machinist Intern</h3>
+                        <h3 lang="fi">CNC-koneistajaharjoittelija</h3>
+                        <p class="date">2024 - Present</p>
+                        <p lang="en">Operating 3-axis and 5-axis CNC mills. Performing tool offsets, part setups, and basic G-code troubleshooting.</p>
+                        <p lang="fi">3- ja 5-akselisten CNC-jyrsinten käyttö. Työkalujen asetukset, kappaleiden kiinnitys ja perus G-koodin vianetsintä.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="scroll-section" id="education">
+            <div class="glass-card fade-text">
+                <h2 lang="en">Education</h2>
+                <h2 lang="fi">Koulutus</h2>
+                <div class="timeline-item">
+                    <h3 lang="en">Vocational Qualification in Machining</h3>
+                    <h3 lang="fi">Koneistajan ammattitutkinto</h3>
+                    <p class="date">Expected 2026</p>
+                    <p lang="en">Focusing on advanced CNC technologies and precision manufacturing workflows.</p>
+                    <p lang="fi">Keskittyy kehittyneisiin CNC-teknologioihin ja tarkkuusvalmistuksen työnkulkuihin.</p>
                 </div>
             </div>
         </section>
@@ -122,10 +110,13 @@
         <!-- Return Section -->
         <section class="scroll-section" id="contact">
             <div class="glass-card fade-text">
-                <h2>Ready for the Next Step</h2>
-                <p>Return to my main portfolio to see my full collection of projects and contact information.</p>
+                <h2 lang="en">Ready for the Next Step</h2>
+                <h2 lang="fi">Valmis seuraavaan askeleeseen</h2>
+                <p lang="en">Return to my main portfolio to see my full collection of projects and contact information.</p>
+                <p lang="fi">Palaa pääportfoliooni nähdäksesi koko projektikokoelmani ja yhteystietoni.</p>
                 <div class="action-buttons">
-                    <a href="index.html" class="cta">Back to Portfolio</a>
+                    <a href="index.html" class="cta" lang="en">Back to Portfolio</a>
+                    <a href="index.html" class="cta" lang="fi">Takaisin portfolioon</a>
                 </div>
             </div>
         </section>
@@ -134,5 +125,6 @@
     <div class="parallax-fg" id="dust"></div>
 
     <script src="cv-script.js"></script>
+    <script src="lang-switch.js"></script>
 </body>
 </html>

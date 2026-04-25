@@ -437,3 +437,37 @@ canvas {
     letter-spacing: 0.5px;
     pointer-events: none;
 }
+/* Language Switching */
+.lang-fi [lang="en"] {
+    display: none !important;
+}
+
+.lang-en [lang="fi"] {
+    display: none !important;
+}
+
+#lang-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10001;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#lang-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+}

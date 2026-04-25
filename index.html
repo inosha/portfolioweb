@@ -10,10 +10,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="lang-en">
+    <button id="lang-toggle">EN / FI</button>
+
     <div id="loader">
         <div class="loader-content">
-            <h2>Preparing Portfolio</h2>
+            <h2 lang="en">Preparing Portfolio</h2>
+            <h2 lang="fi">Valmistellaan portfolioa</h2>
             <div class="progress-bar-container">
                 <div id="progress-bar"></div>
             </div>
@@ -32,50 +35,70 @@
         <section class="scroll-section" id="hero">
             <div class="glass-card fade-text">
                 <h1>INOSHA P. HETTI A.</h1>
-                <p class="subtitle">CNC Machinist Student</p>
-                <p class="tagline">Precision. Programming. Production.</p>
-                <p>Seeking 2026 Internship Opportunities</p>
-                <p class="scroll-prompt">Scroll down to explore my journey ↓</p>
+                <p class="subtitle" lang="en">CNC Machinist Student</p>
+                <p class="subtitle" lang="fi">CNC-koneistajaopiskelija</p>
+                <p class="tagline" lang="en">Precision. Programming. Production.</p>
+                <p class="tagline" lang="fi">Tarkkuus. Ohjelmointi. Tuotanto.</p>
+                <p lang="en">Seeking 2026 Internship Opportunities</p>
+                <p lang="fi">Etsii harjoittelupaikkaa vuodelle 2026</p>
+                <p class="scroll-prompt" lang="en">Scroll down to explore my journey ↓</p>
+                <p class="scroll-prompt" lang="fi">Vieritä alas tutustuaksesi matkaani ↓</p>
             </div>
         </section>
 
         <!-- About Section -->
         <section class="scroll-section" id="about">
             <div class="glass-card fade-text">
-                <h2>About Me</h2>
-                <p>I am a passionate manufacturing student dedicated to the art and science of precision machining. With hands-on experience in modern machine shops, I specialize in transforming raw materials into tight-tolerance components.</p>
-                <p>My goal is to join a forward-thinking team where I can apply my academic knowledge of CAD/CAM and G-code programming to real-world production challenges. I am highly adaptable and always eager to learn new techniques, software, and industry advancements.</p>
+                <h2 lang="en">About Me</h2>
+                <h2 lang="fi">Tietoa minusta</h2>
+                <p lang="en">I am a passionate manufacturing student dedicated to the art and science of precision machining. With hands-on experience in modern machine shops, I specialize in transforming raw materials into tight-tolerance components.</p>
+                <p lang="fi">Olen intohimoinen valmistustekniikan opiskelija, joka on omistautunut tarkkuuskoneistuksen taiteelle ja tieteelle. Minulla on käytännön kokemusta nykyaikaisista konepajoista, ja olen erikoistunut muuntamaan raaka-aineet tiukan toleranssin komponenteiksi.</p>
+                <p lang="en">My goal is to join a forward-thinking team where I can apply my academic knowledge of CAD/CAM and G-code programming to real-world production challenges.</p>
+                <p lang="fi">Tavoitteenani on liittyä eteenpäin katsovaan tiimiin, jossa voin soveltaa akateemista osaamistani CAD/CAM- ja G-koodiohjelmoinnista käytännön tuotantohaasteisiin.</p>
             </div>
         </section>
 
         <!-- Skills Section -->
         <section class="scroll-section" id="skills">
             <div class="glass-card fade-text">
-                <h2>Technical Core</h2>
+                <h2 lang="en">Technical Core</h2>
+                <h2 lang="fi">Tekninen ydinosaaminen</h2>
                 <div class="skills-grid">
                     <div class="skill-item">
-                        <h3>Machining</h3>
-                        <p>CNC Milling, CNC Turning, Manual Lathe/Mill, 3D Printing</p>
+                        <h3 lang="en">Machining</h3>
+                        <h3 lang="fi">Koneistus</h3>
+                        <p lang="en">CNC Milling, CNC Turning, Manual Lathe/Mill, 3D Printing</p>
+                        <p lang="fi">CNC-jyrsintä, CNC-sorvaus, manuaalisorvaus/-jyrsintä, 3D-tulostus</p>
                     </div>
                     <div class="skill-item">
-                        <h3>Programming</h3>
-                        <p>G-Code, M-Code, Conversational Programming</p>
+                        <h3 lang="en">Programming</h3>
+                        <h3 lang="fi">Ohjelmointi</h3>
+                        <p lang="en">G-Code, M-Code, Conversational Programming</p>
+                        <p lang="fi">G-koodi, M-koodi, keskusteleva ohjelmointi</p>
                     </div>
                     <div class="skill-item">
-                        <h3>Software</h3>
-                        <p>CIMCO, WinCAM, Autodesk Inventor, UltiMaker Cura</p>
+                        <h3 lang="en">Software</h3>
+                        <h3 lang="fi">Ohjelmistot</h3>
+                        <p lang="en">CIMCO, WinCAM, Autodesk Inventor, UltiMaker Cura</p>
+                        <p lang="fi">CIMCO, WinCAM, Autodesk Inventor, UltiMaker Cura</p>
                     </div>
                     <div class="skill-item">
-                        <h3>Quality Assurance</h3>
-                        <p>Geometric Dimensioning and Tolerancing, Micrometers, Calipers, Thread Pitch Gauges, Radius Gauge</p>
+                        <h2 lang="en" style="font-size: 1.5rem; margin-bottom: 0.5rem;">Quality Assurance</h2>
+                        <h2 lang="fi" style="font-size: 1.5rem; margin-bottom: 0.5rem;">Laadunvarmistus</h2>
+                        <p lang="en">Geometric Dimensioning and Tolerancing, Micrometers, Calipers, Thread Pitch Gauges</p>
+                        <p lang="fi">Geometrinen mitoitus ja toleranssit, mikrometrit, työntömitat, kierreviilat</p>
                     </div>
                     <div class="skill-item">
-                        <h3>Fabrication & Finishing</h3>
-                        <p>MIG/MAG Welding Fundamentals, Engineering Drawings, Surface Finishing</p>
+                        <h3 lang="en">Fabrication & Finishing</h3>
+                        <h3 lang="fi">Valmistus ja viimeistely</h3>
+                        <p lang="en">MIG/MAG Welding Fundamentals, Engineering Drawings, Surface Finishing</p>
+                        <p lang="fi">MIG/MAG-hitsauksen perusteet, tekniset piirustukset, pinnanviimeistely</p>
                     </div>
                     <div class="skill-item">
-                        <h3>Mechanical Systems</h3>
-                        <p>Hydraulics & Pneumatics, Electrical Installations, Bearing Assembly, Threading, Raw Material Properties</p>
+                        <h3 lang="en">Mechanical Systems</h3>
+                        <h3 lang="fi">Mekaaniset järjestelmät</h3>
+                        <p lang="en">Hydraulics & Pneumatics, Electrical Installations, Bearing Assembly</p>
+                        <p lang="fi">Hydrauliikka ja pneumatiikka, sähköasennukset, laakerikokoonpano</p>
                     </div>
                 </div>
             </div>
@@ -84,17 +107,21 @@
         <!-- Projects Section -->
         <section class="scroll-section" id="projects">
             <div class="glass-card fade-text">
-                <h2>Machining Portfolio</h2>
+                <h2 lang="en">Machining Portfolio</h2>
+                <h2 lang="fi">Koneistusportfolio</h2>
                 <div class="projects-list">
                     <!-- Flickr Photo Portfolio -->
                     <div class="project-item">
-                        <h3>Random Captures</h3>
-                        <p>Explore a high-resolution collection of my precision work, documenting turning, milling, and finished assemblies in detail.</p>
+                        <h3 lang="en">Random Captures</h3>
+                        <h3 lang="fi">Satunnaisia otoksia</h3>
+                        <p lang="en">Explore a high-resolution collection of my precision work, documenting turning, milling, and finished assemblies in detail.</p>
+                        <p lang="fi">Tutustu korkearesoluutioiseen kokoelmaan tarkkuustöistäni, joka dokumentoi sorvausta, jyrsintää ja valmiita kokoonpanoja yksityiskohtaisesti.</p>
                         <div style="margin-top: 1.5rem;">
                             <a href="https://flic.kr/ps/47GgiR" target="_blank" style="text-decoration: none;">
                                 <div style="background: rgba(255,255,255,0.05); border-radius: 12px; padding: 40px 20px; text-align: center; border: 1px dashed rgba(255,255,255,0.2); transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.background='rgba(255,255,255,0.1)'; this.style.borderColor='var(--accent-color)'" onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.borderColor='rgba(255,255,255,0.2)'">
                                     <span style="font-size: 2.5rem; display: block; margin-bottom: 10px;">📸</span>
-                                    <span style="color: var(--accent-color); font-weight: 600; font-size: 1.1rem;">View Photo Archive</span>
+                                    <span style="color: var(--accent-color); font-weight: 600; font-size: 1.1rem;" lang="en">View Photo Archive</span>
+                                    <span style="color: var(--accent-color); font-weight: 600; font-size: 1.1rem;" lang="fi">Katso kuva-arkisto</span>
                                 </div>
                             </a>
                         </div>
@@ -102,13 +129,16 @@
 
                     <!-- YouTube Channel Portfolio -->
                     <div class="project-item">
-                        <h3>Random Video Captures</h3>
-                        <p>Watch the machining process come to life. Technical demonstrations of CNC programming, tool paths, and production cycles on YouTube.</p>
+                        <h3 lang="en">Random Video Captures</h3>
+                        <h3 lang="fi">Satunnaisia videokaappauksia</h3>
+                        <p lang="en">Watch the machining process come to life. Technical demonstrations of CNC programming, tool paths, and production cycles on YouTube.</p>
+                        <p lang="fi">Seuraa koneistusprosessin elävöitymistä. Tekniset demonstraatiot CNC-ohjelmoinnista, työkaluradoista ja tuotantosykleistä YouTubessa.</p>
                         <div style="margin-top: 1.5rem;">
                             <a href="https://www.youtube.com/channel/UCTBQmz-TIbp1Jzc13PE5pTA/" target="_blank" style="text-decoration: none;">
                                 <div style="background: rgba(255,255,255,0.05); border-radius: 12px; padding: 40px 20px; text-align: center; border: 1px dashed rgba(255,255,255,0.2); transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.background='rgba(255,255,255,0.1)'; this.style.borderColor='#ff0000'" onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.borderColor='rgba(255,255,255,0.2)'">
                                     <span style="font-size: 2.5rem; display: block; margin-bottom: 10px;">🎥</span>
-                                    <span style="color: #ff0000; font-weight: 600; font-size: 1.1rem;">Visit YouTube Channel</span>
+                                    <span style="color: #ff0000; font-weight: 600; font-size: 1.1rem;" lang="en">Visit YouTube Channel</span>
+                                    <span style="color: #ff0000; font-weight: 600; font-size: 1.1rem;" lang="fi">Vieraile YouTube-kanavalla</span>
                                 </div>
                             </a>
                         </div>
@@ -120,11 +150,15 @@
         <!-- Contact Section -->
         <section class="scroll-section" id="contact">
             <div class="glass-card fade-text">
-                <h2>Seeking 2026 Internship</h2>
-                <p>Looking for a motivated CNC Machinist intern? I am ready to apply my programming, precision, and production skills to your shop floor.</p>
+                <h2 lang="en">Seeking 2026 Internship</h2>
+                <h2 lang="fi">Etsitään vuoden 2026 harjoittelupaikkaa</h2>
+                <p lang="en">Looking for a motivated CNC Machinist intern? I am ready to apply my programming, precision, and production skills to your shop floor.</p>
+                <p lang="fi">Etsitkö motivoitunutta CNC-koneistajaharjoittelijaa? Olen valmis soveltamaan ohjelmointi-, tarkkuus- ja tuotantotaitojani verstallesi.</p>
                 <div class="action-buttons">
-                    <a href="mailto:alex.carter@example.com" class="cta">Accept My Request & Email Your Decision</a>
-                    <a href="cv.html" class="cta secondary">View Full Qualifications</a>
+                    <a href="mailto:inoshaonline@gmail.com" class="cta" lang="en">Accept My Request & Email Your Decision</a>
+                    <a href="mailto:inoshaonline@gmail.com" class="cta" lang="fi">Hyväksy pyyntöni ja lähetä päätöksesi sähköpostitse</a>
+                    <a href="cv.html" class="cta secondary" lang="en">View Professional CV</a>
+                    <a href="cv.html" class="cta secondary" lang="fi">Katso ammatillinen CV</a>
                 </div>
             </div>
         </section>
@@ -133,5 +167,6 @@
     <div class="parallax-fg" id="dust"></div>
 
     <script src="script.js"></script>
+    <script src="lang-switch.js"></script>
 </body>
 </html>
