@@ -21,6 +21,26 @@ document.addEventListener("DOMContentLoaded", () => {
     const progressBar = document.getElementById("progress-bar");
     const progressText = document.getElementById("progress-text");
 
+    // Intersection Observer for the scrolling text elements (fade-in effect)
+    const fadeElements = document.querySelectorAll('.fade-text');
+    
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1 // Trigger earlier for smoother flow
+    };
+
+    const textObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            } else {
+                // Optional: Remove class to hide elements when scrolled out of view
+                entry.target.classList.remove('visible');
+            }
+        });
+    }, observerOptions);
+
     // State for smooth scrolling animation
     let animationState = {
         currentFrameIndex: 0,
@@ -69,10 +89,20 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (loadedImages === frameCount) {
                     setTimeout(() => {
                         loader.style.opacity = "0";
-                        loader.style.visibility = "hidden";
+                        setTimeout(() => {
+                            loader.style.display = "none";
+                            // Reveal content and enable interactions
+                            const content = document.getElementById("content");
+                            if (content) {
+                                content.style.opacity = "1";
+                                content.style.pointerEvents = "auto";
+                            }
+                            // Trigger the intersection observer manually for elements already in view
+                            fadeElements.forEach(el => textObserver.observe(el));
+                        }, 500);
                         // Start the render loop once loading is complete
                         requestAnimationFrame(render);
-                    }, 600); // Slight delay for smoother user experience
+                    }, 600);
                 }
             };
             images.push(img); // index 0 is frame 1, index 239 is frame 240
@@ -126,26 +156,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Start preloading mechanism
     preloadImages();
-
-    // Intersection Observer for the scrolling text elements (fade-in effect)
-    const fadeElements = document.querySelectorAll('.fade-text');
-    
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.4 // Trigger when 40% of the element is visible
-    };
-
-    const textObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            } else {
-                // Remove class to hide elements when scrolled out of view
-                entry.target.classList.remove('visible');
-            }
-        });
-    }, observerOptions);
 
     fadeElements.forEach(el => {
         textObserver.observe(el);
