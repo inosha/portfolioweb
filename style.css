@@ -14,7 +14,7 @@
 }
 
 body {
-    background: radial-gradient(circle at bottom left, #0f172a 0%, #050505 100%);
+    background-color: var(--bg-color);
     color: var(--text-color);
     font-family: var(--font-family);
     overflow-x: hidden;
@@ -73,15 +73,28 @@ body {
     color: #fff;
 }
 
-/* Parallax Layers */
-.parallax-bg {
+/* Canvas Container */
+.animation-container {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1; /* Below content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #000;
+}
+
+canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100vw;
+    max-height: 100vh;
 }
 
 /* Content Sections */
