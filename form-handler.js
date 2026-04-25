@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (form) {
         form.addEventListener("submit", async (e) => {
             e.preventDefault();
-            
+
             // UI Feedback
             submitBtn.disabled = true;
             submitBtn.innerText = document.body.classList.contains("lang-fi") ? "Lähetetään..." : "Sending...";
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
             };
 
             // NOTE: The user needs to replace this URL with their Google Apps Script Web App URL
-            const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec";
+            const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbykunVrtoLt1jjNRwEPkmcFxlWwWEjBYW42eE6IarxFmyvVpIaiTtaR_i08XhTV1nzf/exec";
 
             try {
                 // If the URL is still the placeholder, we'll simulate a success for now 
