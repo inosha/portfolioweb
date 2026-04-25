@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Carter | CNC Machinist Portfolio</title>
+    <meta name="description" content="Portfolio of Alex Carter, CNC Machinist Student seeking internship opportunities in precision manufacturing.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="loader">
+        <div class="loader-content">
+            <h2>Preparing Portfolio</h2>
+            <div class="progress-bar-container">
+                <div id="progress-bar"></div>
+            </div>
+            <p id="progress-text">0%</p>
+        </div>
+    </div>
+
+    <div class="animation-container">
+        <canvas id="hero-lightpass"></canvas>
+    </div>
+
+    <div class="parallax-bg" id="stars"></div>
+
+    <main id="content">
+        <!-- Hero Section -->
+        <section class="scroll-section" id="hero">
+            <div class="glass-card fade-text">
+                <h1>Alex Carter</h1>
+                <p class="subtitle">CNC Machinist Student</p>
+                <p class="tagline">Precision. Programming. Production.</p>
+                <p>Seeking 2026 Internship Opportunities</p>
+                <p class="scroll-prompt">Scroll down to explore my journey ↓</p>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="scroll-section" id="about">
+            <div class="glass-card fade-text">
+                <h2>About Me</h2>
+                <p>I am a passionate manufacturing student dedicated to the art and science of precision machining. With hands-on experience in modern machine shops, I specialize in transforming raw materials into tight-tolerance components.</p>
+                <p>My goal is to join a forward-thinking team where I can apply my academic knowledge of CAD/CAM and G-code programming to real-world production challenges. I am highly adaptable and always eager to learn new techniques, software, and industry advancements.</p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="scroll-section" id="skills">
+            <div class="glass-card fade-text">
+                <h2>Technical Core</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <h3>Machining</h3>
+                        <p>CNC Milling, CNC Turning, Manual Lathe/Mill, 3D Printing</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3>Programming</h3>
+                        <p>G-Code, M-Code, Conversational Programming</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3>Software</h3>
+                        <p>CIMCO, WinCAM, Autodesk Inventor, UltiMaker Cura</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3>Quality Assurance</h3>
+                        <p>Geometric Dimensioning and Tolerancing, Micrometers, Calipers, Thread Pitch Gauges, Radius Gauge</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3>Fabrication & Finishing</h3>
+                        <p>MIG/MAG Welding Fundamentals, Engineering Drawings, Surface Finishing</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3>Mechanical Systems</h3>
+                        <p>Hydraulics & Pneumatics, Electrical Installations, Bearing Assembly, Threading, Raw Material Properties</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Projects Section -->
+        <section class="scroll-section" id="projects">
+            <div class="glass-card fade-text">
+                <h2>Recent Projects</h2>
+                <div class="projects-list">
+                    <div class="project-item">
+                        <h3>Aerospace Bracket Prototype</h3>
+                        <p>Programmed in Mastercam and machined on a HAAS VF-2. Achieved ±0.001" tolerances on critical bore dimensions.</p>
+                    </div>
+                    <div class="project-item">
+                        <h3>Custom Turning Tool Holder</h3>
+                        <p>Designed in SolidWorks. Turned and threaded using manual and CNC lathes to verify fitment and structural integrity.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="scroll-section" id="contact">
+            <div class="glass-card fade-text">
+                <h2>Let's Build Something</h2>
+                <p>Ready to bring dedicated talent to your shop floor.</p>
+                <div class="action-buttons">
+                    <a href="mailto:alex.carter@example.com" class="cta">Email Me</a>
+                    <a href="cv.html" class="cta secondary">Explore My Curriculum Vitae</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="parallax-fg" id="dust"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae | Alex Carter</title>
+    <meta name="description" content="Curriculum Vitae of Alex Carter, CNC Machinist Student.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* Override for continuous CV flow instead of distinct tiles */
+        .scroll-section {
+            min-height: auto;
+            padding: 2rem 20px;
+        }
+        #hero {
+            min-height: 100vh;
+        }
+        main#content {
+            padding-bottom: 20vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="loader">
+        <div class="loader-content">
+            <h2>Loading Curriculum Vitae</h2>
+            <div class="progress-bar-container">
+                <div id="progress-bar"></div>
+            </div>
+            <p id="progress-text">0%</p>
+        </div>
+    </div>
+
+    <div class="animation-container">
+        <canvas id="hero-lightpass"></canvas>
+    </div>
+
+    <div class="parallax-bg" id="stars"></div>
+
+    <main id="content">
+        <!-- Header Section -->
+        <section class="scroll-section" id="hero">
+            <div class="glass-card fade-text">
+                <img src="img/cv.png" alt="Alex Carter Profile Photo" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem; border: 3px solid rgba(255, 255, 255, 0.2); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);">
+                <h1>Curriculum Vitae</h1>
+                <p class="subtitle">Alex Carter</p>
+                <p>Aspiring CNC Machinist & Manufacturing Professional</p>
+                <p class="scroll-prompt">Scroll down to view details ↓</p>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="scroll-section" id="experience">
+            <div class="glass-card fade-text">
+                <h2>Professional Experience</h2>
+                <div class="projects-list">
+                    <div class="project-item">
+                        <h3>Machinist Student</h3>
+                        <p><strong>2025 – Present</strong></p>
+                        <ul style="margin-top: 10px; padding-left: 20px; color: #e2e8f0; line-height: 1.6;">
+                            <li>Manufacture precise machine components using CNC turning (Okuma and Fanuc) and CNC milling, as well as manual turning and manual milling.</li>
+                            <li>Perform daily machine maintenance and tool changes.</li>
+                            <li>Inspect parts using micrometers, calipers, and thread pitch gauges to ensure adherence to tight tolerances.</li>
+                            <li>Perform MIG/MAG welding and utilize 3D printing for component production.</li>
+                            <li>Install and maintain bearing, pneumatic, hydraulic, and basic electronic systems.</li>
+                            <li>Interpret technical drawings and ensure accuracy in machining processes.</li>
+                            <li>Operate machine tools while maintaining high standards of quality control.</li>
+                            <li>Use WinCAM and CIMCO for CNC programming, simulation, and G-code management.</li>
+                            <li>Create 3D models and technical drawings using Autodesk Inventor.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="scroll-section" id="education">
+            <div class="glass-card fade-text">
+                <h2>Education</h2>
+                <div class="projects-list">
+                    <div class="project-item">
+                        <h3>Mechanical and Production Technology (Machinist)</h3>
+                        <p><strong>Gradia Vocational School (Ammattiopisto)</strong> | Expected Graduation: 2026</p>
+                        <ul style="margin-top: 10px; padding-left: 20px; color: #e2e8f0; line-height: 1.6;">
+                            <li>Coursework includes CNC machining (Okuma and Fanuc), manual machining, CAD/CAM integration, G-code programming, metallurgy, technical drawing, and welding.</li>
+                            <li>Developing practical skills in machine operation, precision measurement, and production techniques.</li>
+                            <li>Consistently achieving strong academic performance (above 4.5/5) in hands-on lab practicals.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section class="scroll-section" id="certifications">
+            <div class="glass-card fade-text">
+                <h2>Certifications</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <h3>First Aid</h3>
+                        <p>(Ensiapu)</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3>Hot Work Permit</h3>
+                        <p>(Tulityökortti)</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3>Occupational Safety Card</h3>
+                        <p>(Työturvallisuuskortti)</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3>Hygiene Passport</h3>
+                        <p>(Hygieniapassi)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Return Section -->
+        <section class="scroll-section" id="contact">
+            <div class="glass-card fade-text">
+                <h2>Ready for the Next Step</h2>
+                <p>Return to my main portfolio or check out my day-to-day shop floor work in the gallery.</p>
+                <div class="action-buttons">
+                    <a href="index.html" class="cta">Back to Portfolio</a>
+                    <a href="gallery.html" class="cta secondary">Daily Work Gallery</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="parallax-fg" id="dust"></div>
+
+    <script src="cv-script.js"></script>
+</body>
+</html>
