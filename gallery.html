@@ -93,20 +93,69 @@
     <script>
         // Hover Autoplay and Reset for YouTube Videos
         const videoCards = document.querySelectorAll('.video-card');
-        
         videoCards.forEach(card => {
             const iframe = card.querySelector('iframe');
             if(iframe) {
                 card.addEventListener('mouseenter', () => {
-                    // Play video on hover
                     iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
                 });
                 card.addEventListener('mouseleave', () => {
-                    // Pause video when mouse leaves
                     iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-                    // Reset video to the beginning
                     iframe.contentWindow.postMessage('{"event":"command","func":"seekTo","args":[0, true]}', '*');
                 });
+            }
+        });
+
+        // Lightbox Modal Functionality
+        const allCards = document.querySelectorAll('.media-card');
+        const lightbox = document.createElement('div');
+        lightbox.className = 'lightbox';
+        lightbox.innerHTML = `
+            <span class="lightbox-close">&times;</span>
+            <div class="lightbox-content" id="lightbox-body"></div>
+        `;
+        document.body.appendChild(lightbox);
+
+        const lightboxBody = document.getElementById('lightbox-body');
+        const closeBtn = document.querySelector('.lightbox-close');
+
+        allCards.forEach(card => {
+            card.style.cursor = 'zoom-in'; // Give users a hint
+            card.addEventListener('click', () => {
+                const media = card.querySelector('img, iframe');
+                if (media) {
+                    const clone = media.cloneNode(true);
+                    
+                    // If it's a video, pause the small grid preview and autoplay the full-screen modal
+                    if (media.tagName === 'IFRAME') {
+                        media.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+                        let src = clone.getAttribute('src');
+                        if (!src.includes('autoplay=1')) {
+                            src += '&autoplay=1';
+                            clone.setAttribute('src', src);
+                        }
+                    }
+                    
+                    lightboxBody.innerHTML = '';
+                    lightboxBody.appendChild(clone);
+                    lightbox.classList.add('active');
+                    document.body.style.overflow = 'hidden'; // Lock background scrolling
+                }
+            });
+        });
+
+        // Close logic
+        const closeModal = () => {
+            lightbox.classList.remove('active');
+            lightboxBody.innerHTML = ''; // This unloads the video/img entirely
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        };
+
+        closeBtn.addEventListener('click', closeModal);
+        lightbox.addEventListener('click', (e) => {
+            // Close if clicking outside the media
+            if (e.target === lightbox || e.target === lightboxBody) {
+                closeModal();
             }
         });
     </script>
