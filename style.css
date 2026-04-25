@@ -495,3 +495,15 @@ canvas {
     border-color: var(--accent-color);
     transform: translateY(-2px);
 }
+
+footer {
+    width: 100%;
+    padding: 2rem 1rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.8rem;
+    font-family: 'Outfit', sans-serif;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
