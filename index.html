@@ -154,12 +154,35 @@
                 <h2 lang="fi">Etsin vuoden 2026 harjoittelupaikkaa</h2>
                 <p lang="en">Looking for a motivated CNC Machinist intern? I am ready to apply my programming, precision, and production skills to your shop floor.</p>
                 <p lang="fi">Etsitkö motivoitunutta CNC-koneistajaharjoittelijaa? Olen valmis soveltamaan ohjelmointi-, tarkkuus- ja tuotantotaitojani verstallesi.</p>
-                <div class="action-buttons">
-                    <a href="mailto:inoshaonline@gmail.com" class="cta" lang="en">Accept My Request & Email Your Decision</a>
-                    <a href="mailto:inoshaonline@gmail.com" class="cta" lang="fi">Hyväksy pyyntöni ja lähetä päätöksesi sähköpostitse</a>
-                    <a href="cv.html" class="cta secondary" lang="en">View Professional CV</a>
-                    <a href="cv.html" class="cta secondary" lang="fi">Katso ammatillinen CV</a>
-                </div>
+                <form id="internship-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="company" lang="en">Company Name</label>
+                        <label for="company" lang="fi">Yrityksen nimi</label>
+                        <input type="text" id="company" name="company" required placeholder="e.g. Acme Machining">
+                    </div>
+                    <div class="form-group">
+                        <label for="name" lang="en">Your Name</label>
+                        <label for="name" lang="fi">Nimesi</label>
+                        <input type="text" id="name" name="name" required placeholder="e.g. John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact" lang="en">Contact Info (Email/Phone)</label>
+                        <label for="contact" lang="fi">Yhteystiedot (Sähköposti/Puhelin)</label>
+                        <input type="text" id="contact" name="contact" required placeholder="e.g. john@company.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message" lang="en">Message (Optional)</label>
+                        <label for="message" lang="fi">Viesti (Valinnainen)</label>
+                        <textarea id="message" name="message" rows="3" placeholder="..."></textarea>
+                    </div>
+                    <button type="submit" id="submit-btn" class="cta">
+                        <span lang="en">Submit Interest</span>
+                        <span lang="fi">Lähetä kiinnostus</span>
+                    </button>
+                    <div id="form-status"></div>
+                </form>
+                <p style="margin-top: 1.5rem; font-size: 0.9rem; color: rgba(255,255,255,0.5);" lang="en">Or email directly: <a href="mailto:inoshaonline@gmail.com" style="color: var(--accent-color);">inoshaonline@gmail.com</a></p>
+                <p style="margin-top: 1.5rem; font-size: 0.9rem; color: rgba(255,255,255,0.5);" lang="fi">Tai lähetä sähköpostia: <a href="mailto:inoshaonline@gmail.com" style="color: var(--accent-color);">inoshaonline@gmail.com</a></p>
             </div>
         </section>
     </main>
@@ -173,5 +196,6 @@
 
     <script src="script.js"></script>
     <script src="lang-switch.js"></script>
+    <script src="form-handler.js"></script>
 </body>
 </html>
