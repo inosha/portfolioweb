@@ -80,7 +80,8 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: 1; /* Below content */
+    z-index: 1;
+    /* Below content */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -105,17 +106,13 @@ canvas {
 }
 
 .scroll-section {
-    min-height: 90vh;
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px 20px;
     pointer-events: auto;
-}
-
-.cv-page .scroll-section {
-    min-height: 70vh;
 }
 
 /* Glassmorphism Cards */
@@ -178,9 +175,20 @@ canvas {
 }
 
 @keyframes pulse {
-    0% { opacity: 0.4; transform: translateY(0); }
-    50% { opacity: 1; transform: translateY(5px); }
-    100% { opacity: 0.4; transform: translateY(0); }
+    0% {
+        opacity: 0.4;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(5px);
+    }
+
+    100% {
+        opacity: 0.4;
+        transform: translateY(0);
+    }
 }
 
 /* Grid Layouts */
@@ -288,7 +296,8 @@ canvas {
 }
 
 /* Parallax Elements */
-.parallax-bg, .parallax-fg {
+.parallax-bg,
+.parallax-fg {
     position: fixed;
     top: 0;
     left: 0;
@@ -313,12 +322,15 @@ canvas {
     .glass-card {
         padding: 2rem;
     }
+
     .glass-card h1 {
         font-size: 2.5rem;
     }
+
     .glass-card h2 {
         font-size: 2rem;
     }
+
     .action-buttons {
         flex-direction: column;
     }
@@ -351,7 +363,8 @@ canvas {
     border-color: rgba(14, 165, 233, 0.6);
 }
 
-.media-card img, .media-card iframe {
+.media-card img,
+.media-card iframe {
     width: 100%;
     height: 250px;
     object-fit: cover;
@@ -408,7 +421,8 @@ canvas {
     align-items: center;
 }
 
-.lightbox-content img, .lightbox-content iframe {
+.lightbox-content img,
+.lightbox-content iframe {
     max-width: 100%;
     max-height: 100%;
     width: auto;
@@ -442,6 +456,7 @@ canvas {
     letter-spacing: 0.5px;
     pointer-events: none;
 }
+
 /* Language Switching */
 .lang-fi [lang="en"] {
     display: none !important;
