@@ -182,8 +182,8 @@ canvas {
 /* Grid Layouts */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
     text-align: left;
     margin-top: 2rem;
 }
@@ -208,10 +208,11 @@ canvas {
 }
 
 .projects-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
     text-align: left;
+    margin-top: 2rem;
 }
 
 .project-item {
