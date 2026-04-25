@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const langToggle = document.getElementById("lang-toggle");
     const body = document.body;
 
-    // Check for saved language preference
-    const savedLang = localStorage.getItem("portfolio-lang") || "en";
+    // Check for saved language preference, default to Finnish (fi)
+    const savedLang = localStorage.getItem("portfolio-lang") || "fi";
     setLanguage(savedLang);
 
     if (langToggle) {
