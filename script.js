@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const context = canvas.getContext("2d");
 
     // Configuration
-    const frameCount = 100; // Shortened from 192
+    const frameCount = 52; // Updated based on newest image set
     const scrollSensitivity = 5; // Reduced from 8 for a tighter experience
     
     // Set dynamic body height based on sensitivity to allow enough scrolling space
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Function to generate the correct image path
     // Maps index 1 to '000001', etc.
     const currentFrame = index => (
-        `anim/animate_this_more_202604251524_${index.toString().padStart(6, '0')}.webp`
+        `anim/Make_realistic_website_202604270208_${index.toString().padStart(6, '0')}.webp`
     );
 
     const images = [];
