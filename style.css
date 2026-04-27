@@ -524,9 +524,32 @@ footer {
     color: rgba(255, 255, 255, 0.4);
     font-size: 0.8rem;
     font-family: 'Outfit', sans-serif;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(5px);
     border-top: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+    z-index: 20;
+    pointer-events: auto;
+}
+
+.visitor-counter {
+    font-size: 0.75rem;
+    opacity: 0.8;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--accent-color);
+}
+
+#visit-count {
+    font-weight: 800;
+    margin-left: 4px;
+    color: #fff;
 }
 
 /* Contact Form */
