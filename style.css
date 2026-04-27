@@ -7,6 +7,10 @@
     --font-family: 'Outfit', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -186,7 +190,7 @@ canvas {
 
     50% {
         opacity: 1;
-        transform: translateY(5px);
+        transform: translateY(10px);
     }
 
     100% {
