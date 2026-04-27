@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     });
                 }
 
-                status.innerText = document.body.classList.contains("lang-fi") ? "Kiitos! Viestisi on lähetetty." : "Thank you! Your interest has been recorded.";
+                status.innerText = document.body.classList.contains("lang-fi") ? "Kiitos! Viestisi on lähetetty." : "Thank you! Your message has been sent.";
                 status.className = "success";
                 form.reset();
             } catch (error) {
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 status.className = "error";
             } finally {
                 submitBtn.disabled = false;
-                submitBtn.innerText = document.body.classList.contains("lang-fi") ? "Lähetä kiinnostus" : "Submit Interest";
+                submitBtn.innerText = document.body.classList.contains("lang-fi") ? "Lähetä" : "Submit";
             }
         });
     }
