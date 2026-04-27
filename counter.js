@@ -14,7 +14,7 @@ async function updateVisitorCount() {
         const data = await response.json();
 
         // Update the display with a formatted number
-        counterElement.innerText = data.count.toLocaleString();
+        counterElement.innerText = data.data.up_count.toLocaleString();
     } catch (error) {
         console.error('Visitor Counter Error:', error);
         counterElement.innerText = '---';
